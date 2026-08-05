@@ -439,7 +439,7 @@ createCharacterTexture(key, bodyColor, hairColor) {
         for (let x = 2; x < 32; x += 6) bridge.fillRect(x, 11, 3, 10);
         bridge.generateTexture('bridge', 32, 32);
         bridge.destroy();
-    }
+    
 
 
         // === EXTRA PREMIUM DECOR ===
@@ -589,17 +589,19 @@ createCharacterTexture(key, bodyColor, hairColor) {
             g.fillRect(2, 2, 10, 10);
         });
 
-        // Roof green (church accent)
-        mk('roof_green', g => {
-            g.fillStyle(0x2e7d32, 1);
-            g.fillRect(0, 0, 32, 32);
-            g.fillStyle(0x1b5e20, 1);
-            for (let y = 0; y < 32; y += 6) g.fillRect(0, y, 32, 2);
-            g.fillStyle(0x66bb6a, 0.4);
-            g.fillRect(0, 0, 32, 4);
-        });
+     // Roof green (church accent)
+mk('roof_green', g => {
+    g.fillStyle(0x2e7d32, 1);
+    g.fillRect(0, 0, 32, 32);
+    g.fillStyle(0x1b5e20, 1);
+    for (let y = 0; y < 32; y += 6) g.fillRect(0, y, 32, 2);
+    g.fillStyle(0x66bb6a, 0.4);
+    g.fillRect(0, 0, 32, 4);
+});
 
-    createUITextures() {
+}
+
+createUITextures() {
         const g = this.make.graphics({ x: 0, y: 0, add: false });
         g.fillStyle(0xe94560, 1);
         g.fillRoundedRect(0, 0, 200, 50, 10);
