@@ -29,7 +29,7 @@ export class WorldScene extends Phaser.Scene {
 
         // Generate a simple top-down map inspired by the city image
         this.generateMap();
-        this.createBuildingColliders();
+        
 
         // Sistemas
         this.timeWeather = new TimeWeatherSystem(this);
@@ -56,6 +56,7 @@ export class WorldScene extends Phaser.Scene {
         this.player.body.setOffset(7, 20);
         this.player.setDepth(10);
         this.player.setScale(1.6);
+       this.createBuildingColliders();
         this.tweens.add({
             targets: this.player,
             scaleY: 1.65,
