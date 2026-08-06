@@ -594,7 +594,9 @@ mk('roof_green', g => {
     g.fillStyle(0x2e7d32, 1);
     g.fillRect(0, 0, 32, 32);
     g.fillStyle(0x1b5e20, 1);
-    for (let y = 0; y < 32; y += 6) g.fillRect(0, y, 32, 2);
+    for (let y = 0; y < 32; y += 6) {
+        g.fillRect(0, y, 32, 2);
+    }
     g.fillStyle(0x66bb6a, 0.4);
     g.fillRect(0, 0, 32, 4);
 });
@@ -602,7 +604,7 @@ mk('roof_green', g => {
 }
 
 createUITextures() {
-        const g = this.make.graphics({ x: 0, y: 0, add: false });
+    const g = this.make.graphics({ x: 0, y: 0, add: false });
         g.fillStyle(0xe94560, 1);
         g.fillRoundedRect(0, 0, 200, 50, 10);
         g.lineStyle(3, 0xffffff, 0.5);
